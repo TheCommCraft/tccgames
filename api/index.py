@@ -23,6 +23,7 @@ grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/396478607_480x360.png", "label": "Ball 3D", "link": "396478607", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/403682025_480x360.png", "label": "Ball 3D 2", "link": "403682025", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/405298192_480x360.png", "label": "Ball 3D 3", "link": "405298192", "description": "Pfeiltasten und Leertaste zum Bewegen."},
+    {"url": "https://cdn2.scratch.mit.edu/get_image/project/1017717920_480x360.png", "label": "Improved Simple Towerdefense", "link": "1017717920", "description": "Plaziere Türme um die Wellen von Gegnern zu überleben."},
 ]
 
 @cache
