@@ -3,7 +3,7 @@
 from functools import cache
 from flask import Flask, render_template
 
-app = Flask(__name__, template_folder="templates")
+app = Flask(__name__, template_folder=".")
 
 grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/818410514_480x360.png", "label": "Jump Up MMO", "link": "818410514", "description": "Nutze die Maus um dich zu bewegen."},
