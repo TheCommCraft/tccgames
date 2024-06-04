@@ -25,13 +25,16 @@ grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/405298192_480x360.png", "label": "Ball 3D 3", "link": "405298192", "description": "Pfeiltasten und Leertaste zum Bewegen."},
 ]
 
+@cache
+def get_data(pid):
+    return list(filter(lambda x: x["link"] == pid, grid))[0]
+
 @app.route('/')
 def home():
     return render_template("home.html", images_and_labels=grid)
 
 @app.route('/<pid>/')
-@cache
 def project(pid):
-    data = list(filter(lambda x: x["link"] == pid, grid))[0]
+    data = get_data(pid)
     return render_template("project.html", data=data)
 
