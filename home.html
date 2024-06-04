@@ -1,0 +1,57 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Spiele</title>
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px;
+        }
+        .grid-item {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Spiele</h1>
+
+    <div class="grid-container">
+        {% for image in images_and_labels %}
+            <div class="grid-item">
+                <a href="{{ image.link }}">
+                    <img src="{{ image.url }}" alt="{{ image.label }}">
+                    <p>{{ image.label }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
