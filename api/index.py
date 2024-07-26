@@ -24,7 +24,7 @@ grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/403682025_480x360.png", "label": "Ball 3D 2", "link": "403682025", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/405298192_480x360.png", "label": "Ball 3D 3", "link": "405298192", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/1017717920_480x360.png", "label": "Improved Simple Towerdefense", "link": "1017717920", "description": "Plaziere Türme um die Wellen von Gegnern zu überleben."},
-]
+    {"url": "https://cdn2.scratch.mit.edu/get_image/project/1047118561_480x360.png", "label": "Imitators Online", "link": "1047118561", "description": "You need to imitate the drawing you are shown by retracing it with your mouse cursor or finger. You will get a score based on accuracy and if you want, you can send your try to the server as a possible highscore which would be shown to everyone else who tries the drawing."]
 
 @cache
 def get_data(pid):
