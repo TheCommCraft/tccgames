@@ -24,7 +24,8 @@ grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/403682025_480x360.png", "label": "Ball 3D 2", "link": "403682025", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/405298192_480x360.png", "label": "Ball 3D 3", "link": "405298192", "description": "Pfeiltasten und Leertaste zum Bewegen."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/1017717920_480x360.png", "label": "Improved Simple Towerdefense", "link": "1017717920", "description": "Plaziere Türme um die Wellen von Gegnern zu überleben."},
-    {"url": "https://cdn2.scratch.mit.edu/get_image/project/1047118561_480x360.png", "label": "Imitators Online", "link": "1047118561", "description": "You need to imitate the drawing you are shown by retracing it with your mouse cursor or finger. You will get a score based on accuracy and if you want, you can send your try to the server as a possible highscore which would be shown to everyone else who tries the drawing."}
+    {"url": "https://cdn2.scratch.mit.edu/get_image/project/1047118561_480x360.png", "label": "Imitators Online", "link": "1047118561", "description": "Du musst die gezeigten Formen nachmalen. Du erhältst dafür eine Bewertung und kannst diese, wenn du willst, an den Server senden, damit er eventuell als Bestversuch aufgefasst wird."},
+    {"url": "https://cdn2.scratch.mit.edu/get_image/project/824262326_480x360.png", "label": "Cubic Crossover", "link": "824262326", "description": "Male Levels, die man als Platformer spielen kann. Diese können auch hochgeladen werden (Kommentare befinden sich bei https://scratch.mit.edu/projects/824262326/ ) und du kannst auch fremde Level spielen. Die Steuerung erfolgt über WASD oder Pfeiltasten."}
 ]
 
 @cache
