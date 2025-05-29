@@ -58,7 +58,8 @@ def send_alert():
         "subject": f"Alert: {request.form.get('alert_name', 'alert_name')}",
         "sender": "tccalert@rsnd.thecommcraft.de",
         "receiver": "tcc@thecommcraft.de",
-        "htmlcontent": f"ALERT!!!\n{request.form.get('alert', 'alert')}",
+        "htmlcontent": f"ALERT!!!\n{request.form.get('alert', 'alert')}"
+    }, cookies={
         "apikey": resend_key
     }).text
     return jsonify({"success": True, "response": resp})
