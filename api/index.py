@@ -54,7 +54,7 @@ def alert_screen():
 def send_alert():
     if not compare_digest(request.form.get("key"), alert_key):
         return jsonify({"success": False})
-    resp = requests.post("https://willroll.thecommcraft.de/", data={
+    resp = requests.post("https://willroll.thecommcraft.de/send_email/", data={
         "subject": f"Alert: {request.form.get('alert_name', 'alert_name')}",
         "sender": "tccalert@rsnd.thecommcraft.de",
         "receiver": "tcc@thecommcraft.de",
