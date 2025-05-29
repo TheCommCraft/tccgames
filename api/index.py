@@ -60,5 +60,5 @@ def send_alert():
         "receiver": "tcc@thecommcraft.de",
         "htmlcontent": f"ALERT!!!\n{request.form.get('alert', 'alert')}",
         "apikey": resend_key
-    }).json()
+    }).text
     return jsonify({"success": True, "response": resp})
