@@ -54,10 +54,11 @@ def alert_screen():
 def send_alert():
     if not compare_digest(request.form.get("key"), alert_key):
         return jsonify({"success": False})
-    requests.post("https://willroll.thecommcraft.de/", data={
+    resp = requests.post("https://willroll.thecommcraft.de/", data={
         "subject": f"Alert: {request.form.get('alert_name', 'alert_name')}",
         "sender": "tccalert@rsnd.thecommcraft.de",
         "receiver": "tcc@thecommcraft.de",
         "htmlcontent": f"ALERT!!!\n{request.form.get('alert', 'alert')}",
         "apikey": resend_key
-    })
+    }).json()
+    return jsonify({"success": True, "response": resp})
