@@ -1,8 +1,9 @@
 
-# A very simple Flask Hello World app for you to get started with...
 from functools import cache
-from flask import Flask, render_template
 from os import getenv
+from hmac import compare_digest
+from flask import Flask, render_template, request, jsonify
+import requests
 
 app = Flask(__name__, template_folder=".")
 
@@ -45,3 +46,18 @@ def project(pid):
     data = get_data(pid)
     return render_template("project.html", data=data)
 
+@app.get("/alert/")
+def alert_screen():
+    return render_template("alert.html")
+
+@app.post("/alert/")
+def send_alert():
+    if not compare_digest(request.form.get("key"), alert_key):
+        return jsonify({"success": False})
+    requests.post("https://willroll.thecommcraft.de/", data={
+        "subject": f"Alert: {request.form.get('alert_name', 'alert_name')}",
+        "sender": "tccalert@rsnd.thecommcraft.de",
+        "receiver": "tcc@thecommcraft.de",
+        "htmlcontent": f"ALERT!!!\n{request.form.get('alert', 'alert')}",
+        "apikey": resend_key
+    })
