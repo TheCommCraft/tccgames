@@ -2,6 +2,7 @@
 # A very simple Flask Hello World app for you to get started with...
 from functools import cache
 from flask import Flask, render_template
+from os import getenv
 
 app = Flask(__name__, template_folder=".")
 
@@ -27,6 +28,9 @@ grid = [
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/1047118561_480x360.png", "label": "Imitators Online", "link": "1047118561", "description": "Du musst die gezeigten Formen nachmalen. Du erhältst dafür eine Bewertung und kannst diese, wenn du willst, an den Server senden, damit er eventuell als Bestversuch aufgefasst wird."},
     {"url": "https://cdn2.scratch.mit.edu/get_image/project/824262326_480x360.png", "label": "Cubic Crossover", "link": "824262326", "description": "Male Levels, die man als Platformer spielen kann. Diese können auch hochgeladen werden (Kommentare befinden sich bei https://scratch.mit.edu/projects/824262326/ ) und du kannst auch fremde Level spielen. Die Steuerung erfolgt über WASD oder Pfeiltasten."}
 ]
+
+alert_key = getenv("ALERT_KEY")
+resend_key = getenv("RESEND_KEY")
 
 @cache
 def get_data(pid):
